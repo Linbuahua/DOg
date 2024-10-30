@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動態看板與功能選單</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        carousel-item img {
+            width: 100%;
+            height: 400px; /* 固定高度 */
+            object-fit: cover; /* 縮放並覆蓋 */
+            object-position: center top; /* 顯示圖片的上半部 */
+        }
+    </style>
+    
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">我的網站</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">產品介紹</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">產品特色</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="about.html">服務聯繫</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="carouselExampleAutoplay" class="carousel slide mt-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://cdn.prod.website-files.com/60d196db74a1e36ff16ebd5d/63c117f19e248b737369b165_puppy-g3237d6104_1920.jpg" style="width: 600px; height: 1000px" class="d-block w-100" alt="看板1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2022/03/07/0/16209623.jpg&x=0&y=0&sw=0&sh=0&exp=3600" class="d-block w-100" alt="看板2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://www.peoplenews.tw/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdElyIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1401f1e0dbf36485ad8897846ee8820e46aea2e4/6kbmOljwf1TjEOJ6dSyXES49ik6J.jpeg" class="d-block w-100" alt="看板3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">上一個</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">下一個</span>
+    </button>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- 卡片 1 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrZlWg4dFntEK4wK0y2QtQVZm3LmgKNAbTlA&s" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">卡片標題 1</h5>
+                    <p class="card-text">這是卡片 1 的內容。</p>
+                    <a href="#" class="btn btn-primary">前往某處</a>
+                </div>
+            </div>
+        </div>
+        <!-- 卡片 2 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrZlWg4dFntEK4wK0y2QtQVZm3LmgKNAbTlA&s" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">卡片標題 2</h5>
+                    <p class="card-text">這是卡片 2 的內容。</p>
+                    <a href="#" class="btn btn-primary">前往某處</a>
+                </div>
+            </div>
+        </div>
+        <!-- 卡片 3 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrZlWg4dFntEK4wK0y2QtQVZm3LmgKNAbTlA&s" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">卡片標題 3</h5>
+                    <p class="card-text">這是卡片 3 的內容。</p>
+                    <a href="#" class="btn btn-primary">前往某處</a>
+                </div>
+            </div>
+        </div>
+        <!-- 卡片 4 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrZlWg4dFntEK4wK0y2QtQVZm3LmgKNAbTlA&s" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">卡片標題 4</h5>
+                    <p class="card-text">這是卡片 4 的內容。</p>
+                    <a href="#" class="btn btn-primary">前往某處</a>
+                </div>
+            </div>
+        </div>
+        <!-- 卡片 5 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrZlWg4dFntEK4wK0y2QtQVZm3LmgKNAbTlA&s" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">卡片標題 5</h5>
+                    <p class="card-text">這是卡片 5 的內容。</p>
+                    <a href="#" class="btn btn-primary">前往某處</a>
+                </div>
+            </div>
+        </div>
+        <!-- 卡片 6 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">卡片標題 6</h5>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wukVNyIrtMc?si=wQ4Tf8ns3KYVEE5J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p class="card-text">這是卡片 6 的內容，包含影片。</p>
+                    <a href="#" class="btn btn-primary">前往某處</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

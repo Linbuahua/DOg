@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動態看板與功能選單</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        carousel-item img {
+            width: 100%;
+            height: 400px; /* 固定高度 */
+            object-fit: cover; /* 縮放並覆蓋 */
+            object-position: center top; /* 顯示圖片的上半部 */
+        }
+    </style>
+    
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">我的網站</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">產品介紹</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">產品特色</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">服務聯繫</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="carouselExampleAutoplay" class="carousel slide mt-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://cdn.prod.website-files.com/60d196db74a1e36ff16ebd5d/63c117f19e248b737369b165_puppy-g3237d6104_1920.jpg" style="width: 600px; height: 1000px" class="d-block w-100" alt="看板1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2022/03/07/0/16209623.jpg&x=0&y=0&sw=0&sh=0&exp=3600" class="d-block w-100" alt="看板2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://www.peoplenews.tw/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdElyIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1401f1e0dbf36485ad8897846ee8820e46aea2e4/6kbmOljwf1TjEOJ6dSyXES49ik6J.jpeg" class="d-block w-100" alt="看板3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">上一個</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">下一個</span>
+    </button>
+</div>
+<div class="container mt-5">
+    <h1 class="text-center">服務聯繫</h1>
+
+    <!-- 聯繫表單 -->
+    <div class="row">
+        <div class="col-md-6">
+            <h3>聯繫我們</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">姓名</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">電子郵件</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">留言</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">發送</button>
+            </form>
+        </div>
+
+        <!-- 聯繫資訊 -->
+        <div class="col-md-6 contact-info">
+            <h3>聯繫資訊</h3>
+            <p><strong>電話：</strong> (02) 1234-5678</p>
+            <p><strong>電子郵件：</strong> info@example.com</p>
+            <p><strong>地址：</strong> 台北市某某區某某路123號</p>
+        </div>
+    </div>
+
+    <!-- 地圖展示 -->
+    <div class="map-container">
+        <h3>我們的位置</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.399757413328!2d121.5663349150729!3d25.03556978396533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abcb75ecdf49%3A0x5e3bc2f9aab3a4a0!2z5LiL6YeO5Z2X5ZCM5YWs5Yy65p2D!5e0!3m2!1szh-TW!2stw!4v1637897061713!5m2!1szh-TW!2stw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
